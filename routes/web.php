@@ -60,14 +60,8 @@ Route::get('/game', function(){
 		$options[] = $vocabulary->getOptions(4, $word);
 	}
 
-	$givenAnswers = [];
-	foreach ($words as $word) {
-		$givenAnswers[] = ['status' => ''];
-	}
-
 	return view('game', [
-		'words' => $words,
-		'options' => $options,
-		'givenAnswers' => $givenAnswers
+		'words' => json_encode($words),
+		'options' => json_encode($options),
 	]);
 });
