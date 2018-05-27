@@ -51,5 +51,23 @@ Route::post('/answer', function() {
 });
 
 Route::get('/game', function(){
-	return view('game');
+	$vocabulary = app()->make(Vocabulary::class);
+	
+	$words = $vocabulary->getRandomWords(3);
+	
+	$options = [];
+	foreach ($words as $word) {
+		$options[] = $vocabulary->getOptions(4, $word);
+	}
+
+	$givenAnswers = [];
+	foreach ($words as $word) {
+		$givenAnswers[] = ['status' => ''];
+	}
+
+	return view('game', [
+		'words' => $words,
+		'options' => $options,
+		'givenAnswers' => $givenAnswers
+	]);
 });

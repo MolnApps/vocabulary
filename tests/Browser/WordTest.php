@@ -170,7 +170,4 @@ class WordTest extends DuskTestCase
                 ->assertSee('2 / 3');
         });
     }
-
-    // Todo: we should set the scope of the play. E.g. 20 words, 50 words, etc.
-    // Todo: on refresh, we go to the next word, regardless of whether the user gave answer.
 }
