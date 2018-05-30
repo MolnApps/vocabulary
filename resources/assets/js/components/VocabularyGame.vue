@@ -15,7 +15,7 @@
                 </li>
             </ul>
         </div>
-        <h3>{{ getCorrectAnswersCount }} / 3</h3>
+        <h3>{{ getCorrectAnswersCount }} / {{ words.length }}</h3>
         <a href="/game" v-show="gameIsCompleted">Start new game</a>
     </div>
 </template>
@@ -24,11 +24,9 @@
     export default {
         props: ['words', 'options'],
         created: function() {
-            var givenAnswers = [];
             this.words.forEach(function(el){
-                givenAnswers.push({status:''});
-            });
-            this.givenAnswers = givenAnswers;
+                this.givenAnswers.push({status:''});
+            }.bind(this));
         },
         data: function() {
             return {

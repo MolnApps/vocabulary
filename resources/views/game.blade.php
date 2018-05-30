@@ -4,8 +4,6 @@
 	<meta charset="UTF-8">
 	<title>Learn words</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<!-- development version, includes helpful console warnings -->
-	<!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 	<style>
 	.is-correct {
 		color: green;

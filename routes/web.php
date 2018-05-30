@@ -53,7 +53,7 @@ Route::post('/answer', function() {
 Route::get('/game', function(){
 	$vocabulary = app()->make(Vocabulary::class);
 	
-	$words = $vocabulary->getRandomWords(3);
+	$words = $vocabulary->getRandomWords(20);
 	
 	$options = [];
 	foreach ($words as $word) {
@@ -65,3 +65,17 @@ Route::get('/game', function(){
 		'options' => json_encode($options),
 	]);
 });
+
+/*
+Route::get('/dictionary', function(){
+	$files = [
+		"/Users/giorgio.schwarz/Sites/vocabulary/resources/dictionary/adjectives.csv",
+		"/Users/giorgio.schwarz/Sites/vocabulary/resources/dictionary/nouns.csv",
+		"/Users/giorgio.schwarz/Sites/vocabulary/resources/dictionary/verbs.csv",
+	];
+
+	foreach ($files as $file) {
+		(new \App\ConvertCsvToPhp($file))->extract();
+	}
+});
+*/

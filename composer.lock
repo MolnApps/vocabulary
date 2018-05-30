@@ -4,8 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fbdde79c9a02fae1468c9db0ce32236",
+    "content-hash": "b87fe6538108ecad68e1e1444f30d16a",
     "packages": [
+        {
+            "name": "ashtokalo/php-translit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ashtokalo/php-translit.git",
+                "reference": "a3d348e1afdbb18ee787269e74a8261346c8c3a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ashtokalo/php-translit/zipball/a3d348e1afdbb18ee787269e74a8261346c8c3a2",
+                "reference": "a3d348e1afdbb18ee787269e74a8261346c8c3a2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP library to convert text from one script to another.",
+            "keywords": [
+                "latinization",
+                "romanization",
+                "translit",
+                "transliteration"
+            ],
+            "time": "2017-02-24T17:16:13+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -4090,7 +4121,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "ashtokalo/php-translit": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
