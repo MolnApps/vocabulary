@@ -4,8 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
 window.Vue = require('vue');
 
 /**
@@ -15,6 +13,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('vocabulary-game', require('./components/VocabularyGame.vue'));
+Vue.component('vocabulary-game-question', require('./components/VocabularyGameQuestion.vue'));
 
 const app = new Vue({
     el: '#app'
